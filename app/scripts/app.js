@@ -41,7 +41,7 @@ angular.module('Hopeoffools', ['ionic', 'config', 'Hopeoffools.controllers'])
         }
       }
 
-    })
+    });
 
     // .state('app.search', {
     //   url: '/search',

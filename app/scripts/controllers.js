@@ -1,18 +1,7 @@
 'use strict';
 angular.module('Hopeoffools.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
-  // Form data for the login modal
-  $scope.loginData = {};
-
-  // // Create the login modal that we will use later
-  // $ionicModal.fromTemplateUrl('templates/login.html', {
-  //   scope: $scope
-  // }).then(function(modal) {
-  //   $scope.modal = modal;
-  // });
-
-  
+.controller('AppCtrl', function() {
 })
 
 .controller('PlaylistsCtrl', function($scope) {
@@ -26,7 +15,7 @@ angular.module('Hopeoffools.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('PlaylistCtrl', function() {
 })
 
 
@@ -50,24 +39,25 @@ angular.module('Hopeoffools.controllers', [])
 
   $scope.buscarMovimentacoes = function()
   {
+    $scope.movimentacoes = [];
     $scope.movimentacoes.push(
     {
-      nome: "Caixa inicial",
+      nome: 'Caixa inicial',
       valor: 325.0,
       data: 1288323623006
     },
     {
-      nome: "Van para Curitiba",
+      nome: 'Van para Curitiba',
       valor: -700.0,
       data: 1288323623006
     },
     {
-      nome: "Venda de Camisetas no Célula",
+      nome: 'Venda de Camisetas no Célula',
       valor: 500.0,
       data: 1288323623006
     },
     {
-      nome: "Venda de EPS",
+      nome: 'Venda de EPS',
       valor: 93.0,
       data: 1288323623006
     });
@@ -92,7 +82,7 @@ angular.module('Hopeoffools.controllers', [])
     $scope.novaMovimentacao = {
       nome: '',
       valor: 0,
-      data: 1288323623006
+      data: new Date().getTime()
     };
     $scope.esconderFormulario();
     $timeout(function() {

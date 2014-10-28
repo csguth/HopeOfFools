@@ -1,0 +1,26 @@
+<div class="modal">
+  <ion-header-bar>
+    <h1 class="title">Adicionar Movimentação</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="esconderFormulario()">Fechar</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="adicionarMovimentacao()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Nome</span>
+          <input type="text" ng-model="novaMovimentacao.nome" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Valor</span>
+          <input type="number" ng-model="novaMovimentacao.valor" required>
+        </label>
+        
+        <label class="item">
+          <button class="button button-block button-balanced" type="submit">Adicionar</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</div>
